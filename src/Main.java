@@ -18,4 +18,16 @@ public class Main {
             System.out.println("Exceção: "+e.getMessage());
         }
     }
+
+    static void contar(int parametro1, int parametro2) throws ParametrosInvalidosException{
+        if(parametro1>parametro2){
+            throw new ParametrosInvalidosException("O segundo parâmetro deve ser maior que o primeiro");
+        }
+
+        int contador = parametro2-parametro1;
+
+        for(int x=1; x<=contador; x++){
+            System.out.println("Imprimindo o número "+x);
+        }
+    }
 }
